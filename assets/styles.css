@@ -357,8 +357,19 @@ body[data-page="services"] .page-hero { background: linear-gradient(118deg, tran
   border: 1px solid var(--warm);
   border-radius: 50%;
   color: var(--ink);
+  transition: color .3s, background .3s, border-color .3s, transform .3s;
 }
-.menu-icon svg { width: 42px; height: 42px; fill: none; stroke: currentColor; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.menu-icon svg { width: 44px; height: 44px; fill: none; stroke: currentColor; stroke-width: 1.45; stroke-linecap: round; stroke-linejoin: round; }
+.menu-icon .icon-fill { fill: currentColor; stroke: none; }
+.menu-icon .brow-line { stroke-width: 2.4; }
+@media (hover: hover) and (pointer: fine) {
+  .menu-row:hover .menu-icon {
+    color: var(--white);
+    background: var(--warm);
+    border-color: var(--warm);
+    transform: translateY(-3px);
+  }
+}
 .menu-row ul { margin: 8px 0 0; padding: 0; list-style: none; }
 .menu-row li { padding: 7px 0; color: rgba(30,32,28,.7); }
 .small-book { justify-self: end; margin-top: 10px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--ink); background: none; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; }
