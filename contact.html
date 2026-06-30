@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e8">
+  <meta name="color-scheme" content="light only">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="Contact și rezervări HAPPINESS Beauty Salon, Oasis Shopping Mall, Chișinău.">
+  <meta name="keywords" content="programare salon Chișinău, contact HAPPINESS Beauty Salon, salon Oasis Shopping Mall, coafor Rîșcani">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_MD">
+  <meta property="og:site_name" content="HAPPINESS Beauty Salon">
+  <meta property="og:title" content="Contact și programări — HAPPINESS Beauty Salon">
+  <meta property="og:description" content="Programează o vizită la HAPPINESS Beauty Salon, Oasis Shopping Mall, etajul 2, Chișinău.">
+  <title>Contact & rezervări — HAPPINESS Beauty Salon</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=20260630-4">
+  <script src="assets/app.js?v=20260630-4" defer></script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main-content">Sari la conținut</a>
+  <div id="site-header"></div>
+  <main id="main-content">
+    <section class="contact-page shell">
+      <div class="contact-intro">
+        <p class="eyebrow reveal" data-i18n="contact.eyebrow">Contact & programări</p>
+        <h1 class="reveal delay-1" data-i18n="contact.title">Ne-ar face plăcere să te <em>vedem.</em></h1>
+        <p class="page-lead reveal delay-2" data-i18n="contact.lead">Trimite o cerere de programare și îți confirmăm rapid ora disponibilă.</p>
+        <div class="contact-details reveal delay-3">
+          <div><span data-i18n="contact.addressLabel">Adresă</span><p>Oasis Shopping Mall, et. 2<br>str. Bogdan Voievod 1, Chișinău</p></div>
+          <div><span data-i18n="contact.hoursLabel">Program</span><p><span data-i18n="common.daily">Zilnic</span><br>09:00 — 19:00</p></div>
+          <div><span data-i18n="contact.phoneLabel">Telefon</span><p><a href="tel:+37378200260">+373 78 200 260</a></p></div>
+        </div>
+      </div>
+      <div class="booking-card reveal delay-2" id="programare">
+        <p class="eyebrow" data-i18n="booking.eyebrow">Cerere de programare</p>
+        <h2 data-i18n="booking.title">Alege momentul potrivit.</h2>
+        <form class="booking-form" data-booking-form>
+          <div class="field-row">
+            <label><span data-i18n="booking.name">Numele tău</span><input name="name" type="text" autocomplete="name" required></label>
+            <label><span data-i18n="booking.phone">Telefon</span><input name="phone" type="tel" autocomplete="tel" placeholder="+373" required></label>
+          </div>
+          <label><span data-i18n="booking.service">Serviciu</span>
+            <select name="service" required data-service-select>
+              <option value="" data-i18n="booking.choose">Alege un serviciu</option>
+              <option value="hair" data-i18n="services.hairTitle">Păr</option>
+              <option value="nails" data-i18n="services.nailsFullTitle">Manichiură & pedichiură</option>
+              <option value="brows" data-i18n="services.browsFullTitle">Sprâncene & gene</option>
+              <option value="makeup" data-i18n="services.makeupTitle">Make-up</option>
+            </select>
+          </label>
+          <div class="field-row">
+            <label><span data-i18n="booking.date">Data preferată</span><input name="date" type="date" required></label>
+            <label><span data-i18n="booking.time">Ora preferată</span><select name="time" required><option value="">—</option><option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option></select></label>
+          </div>
+          <label><span data-i18n="booking.note">Mesaj (opțional)</span><textarea name="note" rows="3"></textarea></label>
+          <button class="button button-dark button-full" type="submit"><span data-i18n="booking.send">Trimite pe WhatsApp</span><i>↗</i></button>
+          <p class="form-note" data-i18n="booking.noteConfirm">Programarea este confirmată după ce echipa îți răspunde.</p>
+        </form>
+      </div>
+      <figure class="contact-salon-photo reveal">
+        <img src="assets/images/real/salon-oasis.webp" width="1680" height="1120" alt="Intrarea reală a HAPPINESS Beauty Salon din Oasis Shopping Mall">
+        <figcaption>Oasis Shopping Mall · etajul 2 · boutique 42</figcaption>
+      </figure>
+    </section>
+    <section class="map-section">
+      <iframe title="HAPPINESS Beauty Salon pe hartă" src="https://www.google.com/maps?q=HAPPINESS%20Beauty%20Salon%20Oasis%20Shopping%20Mall%20Chisinau&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-card" href="https://maps.app.goo.gl/HsXN5EGFsykcKqus8" target="_blank" rel="noopener">
+        <span data-i18n="contact.openMaps">Deschide în Google Maps</span><i>↗</i>
+      </a>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>
