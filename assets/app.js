@@ -236,8 +236,12 @@ function footerMarkup() {
             <p>Oasis Shopping Mall, et. 2<br>str. Bogdan Voievod 1</p>
             <a href="tel:+37378200260">+373 78 200 260</a>
             <div class="footer-social">
-              <a href="https://www.instagram.com/happiness.beauty.salon" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-              <a href="https://www.facebook.com/happiness.beauty.md" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+              <a href="https://www.instagram.com/happiness.beauty.salon" target="_blank" rel="noopener" aria-label="Deschide pagina Instagram" data-tooltip="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.81 5.81 0 0 1 22 7.8v8.4a5.81 5.81 0 0 1-5.8 5.8H7.8A5.81 5.81 0 0 1 2 16.2V7.8A5.81 5.81 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/happiness.beauty.md" target="_blank" rel="noopener" aria-label="Deschide pagina Facebook" data-tooltip="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.65 22v-9h3l.45-3.5h-3.45V7.27c0-1.01.28-1.7 1.73-1.7H17.2V2.45a24.4 24.4 0 0 0-2.66-.14c-2.63 0-4.43 1.6-4.43 4.55V9.5H7.14V13h2.97v9h3.54Z"/></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -295,6 +299,16 @@ function applyLanguage(lang) {
     if (value.includes("<em>")) element.innerHTML = value;
     else element.textContent = value;
   });
+  refreshTooltips();
+}
+
+function refreshTooltips() {
+  document.querySelectorAll("button, a.button, a.text-link, a.small-book, a.map-card").forEach((element) => {
+    const label = element.getAttribute("aria-label") || element.textContent.replace(/\s+/g, " ").trim();
+    if (label) element.dataset.tooltip = label;
+  });
+  document.querySelector(".hero-scroll")?.setAttribute("data-tooltip", "Continuă spre conținut");
+  document.querySelector(".round-link")?.setAttribute("data-tooltip", "Deschide pagina de contact");
 }
 
 applyLanguage(currentLang);
@@ -310,6 +324,7 @@ menuToggle.addEventListener("click", () => {
   const isOpen = document.body.classList.contains("menu-open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Închide meniul" : "Deschide meniul");
+  menuToggle.dataset.tooltip = menuToggle.getAttribute("aria-label");
 });
 document.querySelectorAll(".main-nav a").forEach((link) => link.addEventListener("click", () => {
   document.body.classList.remove("menu-open");
